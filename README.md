@@ -1,0 +1,1 @@
+The purpose of this repo is to store notebooks and code for the assignments related to Statistical Rethinking. It includes the yaml file that will be used for the `conda` virtual environment. The data files, which are not a part of this repo, are in a separate directory within the overall project directory.
