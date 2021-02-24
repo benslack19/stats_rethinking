@@ -21,10 +21,26 @@
 
 echo "\n==================== pre-push hook ===================="
 
-ENV_NAME="stats_rethinking"                                            # Edited this line
+ENV_YML_NAME=($(cat environment.yml | head -1 | cut -d ' ' -f 2))
+
+if [[ $CONDA_DEFAULT_ENV == "base" ]]; then
+    echo "You are in the base environment. The environment yaml file will NOT be updated."
+    echo "Git push will NOT proceed."
+    exit 1
+elif [[ $CONDA_DEFAULT_ENV == $ENV_YML_NAME ]]; then
+    ENV_YML_NAME=($(cat environment.yml | head -1 | cut -d ' ' -f 2))
+    echo "You are pushing from the environment" $CONDA_DEFAULT_ENV"."
+    echo "The environment.yml file's name is" $ENV_YML_NAME"."
+    echo "Git push will proceed."
+else
+    echo "You are probably pushing from an environment that doesn't match"
+    echo "the environment YAML file."
+    echo "Git push will NOT proceed."
+    exit 1
+fi;
 
 # Export conda environment to yaml file
-conda env export -n $ENV_NAME > environment.yml                        # Edited this line
+conda env export -n $ENV_YML_NAME --no-builds > environment.yml                        # Edited this line
 
 # Check if new environment file is different from original 
 git diff --exit-code --quiet environment.yml                           # Edited this line
@@ -35,10 +51,11 @@ if [[ $? -eq 0 ]]; then
 else
     echo "Conda environment changed. Commiting new environment.yml"
     git add environment.yml
-    git commit -m "Updating conda environment"                         # Edited this line
+    git commit -m "Updating conda environment YAML file"                         # Edited this line
     echo 'You need to push again to push additional "Updating conda environment" commit.'
     exit 1
 fi
+
 
 #############################################################################################################
 
