@@ -1,3 +1,6 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/benslack19/stats_rethinking/HEAD)
+
+
 The purpose of this repo is to store notebooks and code for the assignments related to Statistical Rethinking. The data files, which are not a part of this repo, are in a separate directory within the overall project directory.
 
 The folder structure for this project and repo also serves as a template for other projects moving forward.
