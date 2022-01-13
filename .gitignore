@@ -1,2 +1,4 @@
 # Ignore the jupyter notebook checkpoints
 /.ipynb_checkpoints/*
+/SR_notebooks_2021/.DS_Store
+/SR_notebooks_2022/.DS_Store
