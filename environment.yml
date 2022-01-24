@@ -43,6 +43,7 @@ dependencies:
     - defusedxml==0.6.0
     - dill==0.3.3
     - entrypoints==0.3
+    - et-xmlfile==1.1.0
     - fastprogress==1.0.0
     - filelock==3.0.12
     - flatbuffers==2.0
@@ -78,6 +79,7 @@ dependencies:
     - notebook==6.2.0
     - numpy==1.20.1
     - numpyro==0.6.0
+    - openpyxl==3.0.9
     - opt-einsum==3.3.0
     - packaging==20.9
     - pandas==1.2.1
@@ -121,4 +123,5 @@ dependencies:
     - wcwidth==0.2.5
     - webencodings==0.5.1
     - xarray==0.17.0
+    - xlrd==2.0.1
 prefix: /Users/blacar/opt/anaconda3/envs/stats_rethinking
