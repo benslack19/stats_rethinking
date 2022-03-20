@@ -103,6 +103,7 @@ dependencies:
     - python-dateutil==2.8.1
     - python-graphviz==0.16
     - pytz==2021.1
+    - pyupset==0.1.1.post7
     - pyyaml==5.4.1
     - pyzmq==22.0.3
     - regex==2020.11.13
@@ -122,6 +123,7 @@ dependencies:
     - typed-ast==1.4.2
     - typing-extensions==3.7.4.3
     - tzlocal==2.1
+    - upsetplot==0.6.0
     - watermark==2.1.0
     - wcwidth==0.2.5
     - webencodings==0.5.1
