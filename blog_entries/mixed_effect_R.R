@@ -1,18 +1,16 @@
 # Purpose is to understand R/frequentist/lme4 mixed effects approach
 # and contrast with Bayesian way
 
-# pckgs <- c("lme4", "nlmeU", "plyr", "reshape", "RLRsim", "WWGbook", "ellipse")
-# install.packages(pckgs)
+pckgs <- c("lme4", "rethinking", "arm", "merTools")
+install.packages(pckgs)
 
 # pckgs <- c("tidyverse", "ggVennDiagram")
-# install.packages(pckgs)
+install.packages("brms")
 
 
 # install.packages("nleqslv")
 # install.packages("merTools")
 # 
-# install.packages("sf")
-
 
 # library("devtools")
 # # install_github("lme4/lme4",dependencies=TRUE)
