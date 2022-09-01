@@ -26,6 +26,38 @@ library(tidyverse)
 # #library(brms)
 
 
+# trying code I found -----
+
+
+
+mixed_result<- lmer(Reaction ~ Days + (1|Subject), data = sleepstudy)
+
+# only does estimate
+data.frame(var = names(fixef(mixed_result$full_b$m3)),
+           coef = as.vector(fixef(mixed_result$full_b$m3)))
+
+
+data.frame(var = names(fixef(mixed_result$full_b$m3)),
+           coef = as.vector(fixef(mixed_result$full_b$m3)))
+
+summary(mixed_result)
+
+fixEffect<-fixef(mixed_result)
+randEffect<-ranef(mixed_result)
+
+str(mixed_result)
+
+mixed_result
+
+str(fixEffect)
+
+varCorr(fixEffect)
+
+as.data.frame(fixEffect)
+
+summary(mixed_result)$coefficients[, 2]
+
+
 # Doing TJ Mahr's post --------
 
 
